@@ -1,0 +1,19 @@
+services:
+  mon-api:
+    build: .
+    ports:
+    - "8080:5000"
+    environment:
+      - PORT=5000
+      - APP_ENV=production
+      - REDIS_HOST=ma-base-redis
+    depends_on:
+      - ma-base-redis
+  
+  ma-base-redis:
+    image: redis:7-alpine
+    volumes:
+      - donnees-redis:/data
+    
+volumes:
+  donnees-redis:
