@@ -22,7 +22,7 @@ def home():
         visites = "Base de donnees non connectee"
 
     return jsonify({
-        "message": "Mon API Pro Docker + Redis + GitHub Actions !",
+        "message": "Mon Pipeline CI/CD 100% Automatique fonctionne !",
         "environment": env_name,
         "visites": visites,
         "status": "success"
